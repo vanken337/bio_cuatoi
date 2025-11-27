@@ -113,32 +113,11 @@
     }
 </style>
 </head>
-  <meta name="description" content="Bio MXH của Vanken Avatar 🧟‍♂️ | TikTok, YouTube, Zalo">
-<meta name="keywords" content="Vanken, Vanken Avatar, bio Vanken, link mxh">
-<meta name="author" content="Vanken">
-<title>Vanken Avatar 🧟‍♂️ | Bio MXH</title>
-  
 <body>
-  <audio id="bgm" src="music.mp3" preload="auto" loop></audio>
-
-<div id="playMusic">▶ PLAY MUSIC</div>
-
-<script>
-const music = document.getElementById("bgm");
-const btn = document.getElementById("playMusic");
-
-btn.onclick = () => {
-  music.volume = 0.7;
-  music.play();
-  btn.style.display = "none";
-};
-</script>
-  
 
   <!-- Random stars -->
   <script>
-    for (let i = 0; i < 60; i++) {
-      const star = document.createElement('div');
+    for (let i = 0; i < 60; i++) {const star = document.createElement('div');
       star.className = 'star';
       star.style.top = Math.random() * 100 + 'vh';
       star.style.left = Math.random() * 100 + 'vw';
@@ -187,6 +166,7 @@ btn.onclick = () => {
       snake.className = 'snake';
       snake.style.color = colors[i % colors.length];
       btn.appendChild(snake);
-</script>
+    });
+  </script>
 </body>
 </html>
