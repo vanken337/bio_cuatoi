@@ -128,6 +128,7 @@
 
   <div class="container">
     <h1>🧟‍♂️ vanken</h1>
+    <span id="musicToggle">🔇</span>
     <div class="links">
       <a href="https://www.tiktok.com/@nhanquafffree1?_r=1&_t=ZS-91hCMX7gxZR" onclick="window.location.href=this.href;" target="_blank">
         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" width="26"> TikTok 1
@@ -168,5 +169,41 @@
       btn.appendChild(snake);
     });
   </script>
+  <!-- MUSIC TOGGLE -->
+<audio id="bgm" src="music.mp3" loop preload="auto"></audio>
+
+<style>
+#musicToggle{
+  margin-left: 8px;
+  font-size: 22px;
+  cursor: pointer;
+  user-select: none;
+  filter: drop-shadow(0 0 6px cyan);
+  transition: transform .2s ease, filter .2s ease;
+}
+#musicToggle:active{
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 10px #00ffff);
+}
+</style>
+
+<script>
+const bgm = document.getElementById("bgm");
+const toggle = document.getElementById("musicToggle");
+bgm.volume = 0.6;
+let on = false;
+
+toggle.onclick = () => {
+  if(!on){
+    bgm.play();
+    toggle.textContent = "🔊";
+    on = true;
+  }else{
+    bgm.pause();
+    toggle.textContent = "🔇";
+    on = false;
+  }
+};
+</script>
 </body>
 </html>
