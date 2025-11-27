@@ -119,6 +119,21 @@
 <title>Vanken Avatar 🧟‍♂️ | Bio MXH</title>
   
 <body>
+  <audio id="bgm" src="music.mp3" preload="auto" loop></audio>
+
+<div id="playMusic">▶ PLAY MUSIC</div>
+
+<script>
+const music = document.getElementById("bgm");
+const btn = document.getElementById("playMusic");
+
+btn.onclick = () => {
+  music.volume = 0.7;
+  music.play();
+  btn.style.display = "none";
+};
+</script>
+  
 
   <!-- Random stars -->
   <script>
